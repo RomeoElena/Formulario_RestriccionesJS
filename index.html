@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulario con restricciones Javascript</title>
+  <link rel="stylesheet" href="public/Form.png" type="image/x-icon">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <div class="contenedor">
+    <h1>Formulario con restricciones Javascript</h1>
+    <form id="formulario">
+      <div class="fila">
+        <div class="campo">
+          <label for="nombre">Nombre completo</label>
+          <input type="text" id="nombre" name="nombre" placeholder="Introduce tu nombre completo">
+          <div class="mensaje-error" id="error-nombre"></div>
+        </div>
+
+        <div class="campo">
+          <label for="email">Correo electrónico</label>
+          <input type="email" id="email" name="email" placeholder="xxx@xxxx.com">
+          <div class="mensaje-error" id="error-email"></div>
+        </div>
+      </div>
+      <div class="fila">
+        <div class="campo">
+          <label for="telefono">Número de teléfono (opcional)</label>
+          <input type="text" id="telefono" name="telefono" placeholder="655555555">
+          <div class="mensaje-error" id="error-telefono"></div>
+        </div>
+
+        <div class="campo">
+          <label for="fecha">Fecha de nacimiento</label>
+          <input type="date" id="fecha" name="fecha">
+          <div class="mensaje-error" id="error-fecha"></div>
+        </div>
+      </div>
+      <div class="fila">
+        <div class="campo">
+          <label>Género</label>
+          <div class="opciones-radio" id="contenedor-genero">
+            <label><input type="radio" name="genero" value="masculino"> Masculino</label>
+            <label><input type="radio" name="genero" value="femenino"> Femenino</label>
+            <label><input type="radio" name="genero" value="otro"> Otro</label>
+          </div>
+          <div class="mensaje-error" id="error-genero"></div>
+        </div>
+
+        <div class="campo">
+          <label for="pais">País</label>
+          <select id="pais" name="pais">
+            <option value="">Selecciona un país</option>
+            <option value="espana">España</option>
+            <option value="francia">Francia</option>
+            <option value="eeuu">EEUU</option>
+            <option value="rusia">Rusia</option>
+          </select>
+          <div class="mensaje-error" id="error-pais"></div>
+        </div>
+      </div>
+      <div class="campo">
+        <label id="label-terminos" class="checkbox-label">
+          <input type="checkbox" id="terminos" name="terminos">
+          Acepto los términos y condiciones</label>
+        <div class="mensaje-error" id="error-terminos"></div>
+      </div>
+
+      <button type="submit" class="boton-enviar">Enviar</button>
+    </form>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
